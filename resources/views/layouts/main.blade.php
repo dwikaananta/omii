@@ -33,11 +33,41 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
+                            <a class="nav-link" href="/dashboard"><i class="fa fa-dashboard mr-1"></i> Dashboard</a>
+                        </li>
+                        <li class="nav-item active dropdown">
+                            <a class="nav-link" href="#" id="ddSepatu" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-caret-square-down mr-1"></i> Sepatu
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="ddSepatu">
+                                <a class="dropdown-item" href="/sepatu">Data Sepatu</a>
+                                <a class="dropdown-item" href="/sepatu-peramalan">Peramalan Sepatu</a>
+                            </div>
+                        </li>
+                        <li class="nav-item active dropdown">
+                            <a class="nav-link" href="#" id="ddSandal" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-caret-square-down mr-1"></i> Sandal
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="ddSandal">
+                                <a class="dropdown-item" href="/sandal">Data Sandal</a>
+                                <a class="dropdown-item" href="/sandal-peramalan">Peramalan Sandal</a>
+                            </div>
+                        </li>
+                        <li class="nav-item active dropdown">
+                            <a class="nav-link" href="#" id="ddHeels" data-toggle="dropdown" aria-expanded="false">
+                                <i class="fa fa-caret-square-down mr-1"></i> Heels
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="ddHeels">
+                                <a class="dropdown-item" href="/heels">Data Heels</a>
+                                <a class="dropdown-item" href="/heels-peramalan">Peramalan Heels</a>
+                            </div>
+                        </li>
+                        {{-- <li class="nav-item active">
                             <a class="nav-link" href="/barang"><i class="fa fa-box-open mr-1"></i> Barang</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="/peramalan"><i class="fa fa-search mr-1"></i> Peramalan</a>
-                        </li>
+                        </li> --}}
                         <li class="nav-item active">
                             <a href="/logout" class="nav-link" href="/peramalan"
                                 onclick="if (confirm('Yakin logout ?')) {return true} return false"><i
