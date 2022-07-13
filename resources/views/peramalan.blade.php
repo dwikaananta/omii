@@ -1,7 +1,6 @@
 @extends('layouts.main')
 
 @section('content')
-
     <div class="btn-group mb-3">
         <button class="btn btn-sm btn-primary" onclick="show()">Show</button>
         <button class="btn btn-sm btn-secondary" onclick="hide()">Hide</button>
@@ -169,8 +168,7 @@
 
 
     <h1>Peramalan Bulan {{ $lastx + 1 }} = {{ round($a + $b * ($lastx + 1), 2) }}</h1>
-    <h1>MSE = {{ round($yyi2 / $lastx, 2) }}</h1>
-
+    <h1>MAPE = {{ round($yyi2 / $lastx, 2) }}</h1>
 @endsection
 
 

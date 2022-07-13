@@ -170,7 +170,7 @@
 
 
         <h1>Hasil peramalan pada {{ $max_date }} = {{ round($a + $b * ($lastx + 1), 2) }}</h1>
-        <h1>MSE = {{ round($yyi2 / $lastx, 2) }}</h1>
+        <h1>MAPE = {{ round($yyi2 / $lastx, 2) }}</h1>
     @else
         <h3>Data sepatu kurang dari 2 bulan, setidaknya harus ada dua data agar dapat melakukan peramalan !</h3>
     @endif
