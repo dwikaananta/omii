@@ -169,8 +169,45 @@
         </div>
 
 
-        <h1>Hasil peramalan pada {{ $max_date }} = {{ round($a + $b * ($lastx + 1), 2) }}</h1>
-        <h1>MAPE = {{ round($yyi2 / $lastx, 2) }}</h1>
+        <div class="row">
+            <div class="col-6 border-right d-flex align-items-center">
+                <div>
+                    <h3>Hasil peramalan pada {{ $max_date }} = {{ round($a + $b * ($lastx + 1), 2) }}</h3>
+                    <h3>Nilai MAPE = {{ round($yyi2 / $lastx, 2) }} %</h3>
+                </div>
+            </div>
+            <div class="col-6">
+                <p>Mean Abosolute Percentage Error (MAPE) merupakan informasi besaran kesalahan peramalan dibandingkan
+                    dengan nilai sebenarnya.</p>
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th>Range MAPE</th>
+                            <th>Arti Nilai</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                < 10%</td>
+                            <td>Kemampuan model peramalan sangat baik</td>
+                        </tr>
+                        <tr>
+                            <td>10 - 20%</td>
+                            <td>Kemampuan model peramalan baik</td>
+                        </tr>
+                        <tr>
+                            <td>21 - 50%</td>
+                            <td>Kemampuan model peramalan layak</td>
+                        </tr>
+                        <tr>
+                            <td>> 50%</td>
+                            <td>Kemampuan model peramalan buruk</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     @else
         <h3>Data heels kurang dari 2 bulan, setidaknya harus ada dua data agar dapat melakukan peramalan !</h3>
     @endif
