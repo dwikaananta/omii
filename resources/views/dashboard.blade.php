@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="row">
+    <div class="row py-5">
         <div class="col-4 text-center border">
             <h4 class="m-0">Jumlah Sepatu</h4>
             <h6 class="text-secondary mb-3">{{ $sepatu_min_date ? date('m-Y', strtotime($sepatu_min_date)) : '' }} s/d

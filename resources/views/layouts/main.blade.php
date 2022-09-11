@@ -17,13 +17,59 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap4.min.css">
 
+    {{-- <style>
+        .bg-primary {
+            background-color: #acacac !important;
+        }
+
+        .bg-success {
+            background-color: #acacac !important;
+        }
+
+        .bg-danger {
+            background-color: #acacac !important;
+        }
+
+        .btn-success {
+            background-color: #acacac !important;
+            border-color: #acacac;
+        }
+
+        .btn-danger {
+            background-color: #acacac !important;
+            border-color: #acacac;
+        }
+
+        .btn-primary {
+            background-color: #acacac !important;
+            border-color: #acacac;
+        }
+
+        .page-item.active .page-link {
+            z-index: 3;
+            color: #fff;
+            background-color: #acacac;
+            border-color: #acacac;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: #acacac;
+            border-color: #acacac;
+        }
+
+        .text-success {
+            color: black !important;
+        }
+    </style> --}}
+
     <title>{{ env('APP_NAME') }}</title>
 </head>
 
 <body class="bg-light">
 
     @if (auth()->check())
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
                 <a class="navbar-brand" href="#">{{ env('APP_NAME') }}</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -36,7 +82,8 @@
                             <a class="nav-link" href="/dashboard"><i class="fa fa-dashboard mr-1"></i> Dashboard</a>
                         </li>
                         <li class="nav-item active dropdown">
-                            <a class="nav-link" href="#" id="ddSepatu" data-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link" href="#" id="ddSepatu" data-toggle="dropdown"
+                                aria-expanded="false">
                                 <i class="fa fa-caret-square-down mr-1"></i> Sepatu
                             </a>
                             <div class="dropdown-menu" aria-labelledby="ddSepatu">
@@ -45,7 +92,8 @@
                             </div>
                         </li>
                         <li class="nav-item active dropdown">
-                            <a class="nav-link" href="#" id="ddSandal" data-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link" href="#" id="ddSandal" data-toggle="dropdown"
+                                aria-expanded="false">
                                 <i class="fa fa-caret-square-down mr-1"></i> Sandal
                             </a>
                             <div class="dropdown-menu" aria-labelledby="ddSandal">
@@ -54,7 +102,8 @@
                             </div>
                         </li>
                         <li class="nav-item active dropdown">
-                            <a class="nav-link" href="#" id="ddHeels" data-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link" href="#" id="ddHeels" data-toggle="dropdown"
+                                aria-expanded="false">
                                 <i class="fa fa-caret-square-down mr-1"></i> Heels
                             </a>
                             <div class="dropdown-menu" aria-labelledby="ddHeels">
@@ -82,6 +131,12 @@
                 {{ $title ?? null }}
             </div>
             @yield('content')
+        </div>
+
+        <div class="py-3 bg-white text-center container border-top">
+            Copyright © MiMayun Shop <script>
+                document.write(new Date().getFullYear())
+            </script>
         </div>
     @else
         @yield('content')
