@@ -11,10 +11,10 @@
                 @include('layouts.alert')
                 @csrf
                 <div class="form-group">
-                    <input type="email" class="form-control" name="email" required>
+                    <input type="email" class="form-control" placeholder="username" name="email" required>
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" name="password" required>
+                    <input type="password" class="form-control" placeholder="password" name="password" required>
                 </div>
                 <button class="btn btn-primary w-100" type="submit"><i class="fa fa-sign-in mr-1"></i>Login</button>
             </form>

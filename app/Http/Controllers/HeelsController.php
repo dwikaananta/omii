@@ -44,8 +44,10 @@ class HeelsController extends Controller
         //
     }
 
-    public function edit(Heels $heels)
+    public function edit($id)
     {
+        $heels = Heels::find($id);
+
         $res = [
             'title' => 'Ubah Data Heels',
             'heels' => $heels,
@@ -54,8 +56,9 @@ class HeelsController extends Controller
         return view('heels.edit', $res);
     }
 
-    public function update(Request $req, Heels $heels)
+    public function update(Request $req, $id)
     {
+        $heels = Heels::find($id);
         $data = $req->validate([
             'jumlah' => 'required',
             'bulan' => [
@@ -69,9 +72,9 @@ class HeelsController extends Controller
         return redirect('/heels')->with('success', 'Berhasil ubah data Heels !');
     }
 
-    public function destroy(Heels $heels)
+    public function destroy($id)
     {
-        Heels::destroy($heels->id);
+        Heels::destroy($id);
 
         return redirect('/heels')->with('success', 'Berhasil hapus data Heels !');
     }
